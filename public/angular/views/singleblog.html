@@ -1,0 +1,28 @@
+<div class="row" ng-init="currentBlog.loadSingleBlog()">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+        <h1>{{currentBlog.blog.title}}</h1>
+
+        <div class="post-preview">
+            <p>
+
+                {{currentBlog.blog.bodyHtml}}
+
+            </p>
+            <p class="post-meta">Posted by <a href="#">{{currentBlog.blog.author}}</a> on {{currentBlog.blog.created | date:'medium'}}</p>
+        </div>
+        <hr>
+
+
+
+        <!-- Pager -->
+        <ul class="pager">
+            <li class="next">
+                <a ng-href="#/blogs/{{currentBlog.blogId}}/edit">Edit this blog &rarr;</a>
+            </li>
+            <li class="next">
+                <a href="#/">Back to Home &rarr;</a>
+            </li>
+        </ul>
+    </div>
+</div>

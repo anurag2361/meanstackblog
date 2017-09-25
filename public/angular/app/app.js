@@ -1,0 +1,1 @@
+var blogapp=angular.module('blogapp',['ngRoute']);

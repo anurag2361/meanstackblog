@@ -1,0 +1,22 @@
+<div class="row" ng-init="newBlog.showAllBlogs()">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="pager">
+            <li class="next">
+                <a ng-href="#/add" data-target="#add">Add New Blog</a>
+            </li>
+        </ul>
+
+        <div class="post-preview" ng-repeat="blog in newBlog.allBlogs">
+            <a ng-href="#/blogs/{{blog.blogId}}" data-target="#blogs">
+                <h2 class="post-title">
+                    {{blog.title}}
+                </h2>
+            </a>
+            <p ng-if='blog.author!=""' class="post-meta">Posted By <a href="#">{{blog.author}}</a> on {{blog.created|date:'medium'}}</p>
+
+            <p><a style="cursor:pointer" ng-click="newBlog.deleteBlog(blog.blogId,$index)">Delete Blog</a></p>
+
+        </div>
+        <hr>
+    </div>
+</div>

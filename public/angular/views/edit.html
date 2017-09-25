@@ -1,0 +1,32 @@
+<div class="row" ng-init="editBlog.getCurrentPost()">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <br/>
+        <h1>Edit this blog post</h1>
+        <div class="post-preview">
+            <form ng-submit="editBlog.editPost(editBlog.blogId)">
+
+                <input placeholder="Title of Blog" type="text" name="title" ng-model="editBlog.blog.title" required=""><br/><br/>
+                <input placeholder="Author" type="text" name="author" ng-model="editBlog.blog.author"><br/><br/>
+
+                <textarea rows="4" cols="50" ng-model="editBlog.blog.bodyHtml" required="">
+                        
+                   </textarea>
+                <br/><br/>
+                <input type="submit" value="Edit this Blog">
+
+
+
+            </form>
+        </div>
+        <hr>
+
+
+
+        <!-- Pager -->
+        <ul class="pager">
+            <li class="next">
+                <a href="#/">Back to Home &rarr;</a>
+            </li>
+        </ul>
+    </div>
+</div>
